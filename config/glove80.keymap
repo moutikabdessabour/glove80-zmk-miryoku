@@ -21,7 +21,7 @@
 #include <dt-bindings/zmk/rgb_colors.h>
 
 /* On demand includes */
-#include <dt-bindings/zmk/pointing.h>
+/* #include <dt-bindings/zmk/pointing.h> */
 
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
@@ -72,6 +72,8 @@
 #define LAYER_Lower 0
 #endif
 
+
+#define ENABLE_MOUSE_KEYS 1
 /* Custom Device-tree */
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -527,6 +529,7 @@
 #define MOUSE_SCALER_WARP 12 1
 #endif
 /*HACK*/};
+
 #ifdef ENABLE_MOUSE_KEYS
   // ==== MOUSE-KEY <section begins> ====
   #define ZMK_POINTING_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
